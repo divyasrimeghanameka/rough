@@ -28,3 +28,6 @@ int main(int argc,char*argv[])
 	}
 	return 0;
 }
+cpmpilation :
+gcc <filename>.c
+./<filename> <textfile name in which spaces are to be counted>
