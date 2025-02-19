@@ -7,13 +7,16 @@ int main(int argc,char*argv[])
 {
 	char buff[100];
 	DIR*dirp;
+	struct dirent *dptr;
 	printf("\n\nENTER DIRECTORY NAME");
 	scanf("%s",buff);
-	if((dirp=opendir(buff))==NULL)
+	dirp=opendir(buff);
+	if(dirp==NULL)
 	{
 		printf("the given directory does not exist");
 		exit(1);
 	}
+	printf("contents of directory are:\n");
 	while((dptr=readdir(dirp))!=NULL)
 	{
 		printf("%s\n",dptr->d_name);
@@ -22,6 +25,7 @@ int main(int argc,char*argv[])
 }
 output:
 ENTER DIRECTORY NAMEdivya
+contents of directory are:
 sowmya.txt
 ..
 .
