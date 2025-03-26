@@ -2,7 +2,7 @@
 int main() 
 {
     int i, j, n, bt[20], wt[20], tat[20], t, ct[20], max;
-    float wtavg = 0, ttavg = 0, temp = 0;
+    float wtavg = 0, tatavg = 0, temp = 0;
     printf("\nEnter number of processes:\n");
     scanf("%d", &n);
     for (i = 0; i < n; i++) 
@@ -42,10 +42,10 @@ int main()
     for (i = 0; i < n; i++) 
     {
         wt[i] = tat[i] - ct[i]; 
-        ttavg += tat[i];
+        tatavg += tat[i];
         wtavg += wt[i];
     }
-    printf("\nAverage Turnaround Time: %.2f", ttavg / n);
+    printf("\nAverage Turnaround Time: %.2f", tatavg / n);
     printf("\nAverage Waiting Time: %.2f", wtavg / n);
     printf("\n\tProcess\tBurst time\tWaiting time\tTurnaround time\n");
     for (i = 0; i < n; i++) 
