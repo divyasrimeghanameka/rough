@@ -7,7 +7,7 @@ int main()
     scanf("%d", &n);
     for (i = 0; i < n; i++) 
     {
-        printf("\nEnter burst time for process %d: ", i + 1);
+        printf("\nEnter burst time for process P%d: ", i + 1);
         scanf("%d", &bt[i]);
         ct[i] = bt[i]; 
     }
