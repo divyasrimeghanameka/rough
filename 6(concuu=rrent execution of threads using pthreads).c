@@ -21,12 +21,12 @@ void *Mythread2(void *vargp)
 }
 int main()
 {
-	pthread_t tid;
+	pthread_t tid1,tid2;
 	printf("before thread\n");
-	pthread_create(&tid,NULL,Mythread1,NULL);
-	pthread_create(&tid,NULL,Mythread2,NULL);
-	pthread_join(tid,NULL);
-	pthread_join(tid,NULL);
+	pthread_create(&tid1,NULL,Mythread1,NULL);
+	pthread_create(&tid2,NULL,Mythread2,NULL);
+	pthread_join(tid1,NULL);
+	pthread_join(tid2,NULL);
 	exit(0);
 }
 output:
